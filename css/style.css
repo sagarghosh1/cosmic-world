@@ -8,17 +8,49 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 header {
-    height: 100vh;
     background-image: url('../images/cloud.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.50);
     background-blend-mode: overlay;
 }
+/*------
+ common css
+ ------ */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 30px;
+}
+.primary-button {
+    outline: 0;
+    border: 0;
+    padding: 15px 20px;
+    background-image: linear-gradient(90deg, lawngreen,rgb(92, 163, 22));
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 7px 0 rgb(92, 163, 22);
+    position: relative;
+    top: 0;
+}
+.section-title {
+    text-align: center;
+}
+.section-title h2 {
+    font-size: 40px;
+    display: inline-block;
+    border-bottom: 2px solid lawngreen;
+    margin: 50px 0;
+}
+.primary-button:active {
+    top: 5px;
+    box-shadow: 0 2px 0 rgb(92, 163, 22);
+}
+.hailight {
+    color: lawngreen;
 }
 nav {
     display: flex;
@@ -35,5 +67,75 @@ nav {
 }
 .navigation li a {
     text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 10px 10px;
+}
 
+
+.banner {
+    height: calc(100vh - 80px);
+    display: grid;
+    grid-template-columns:1fr 1fr;
+}
+.banner-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.banner-left h1 {
+    font-size: 45px;
+    color: #ffffff;
+}
+.banner-left p {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 20px 0;
+
+}
+.banner-right {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.banner-right img {
+    width: 100%;
+}
+
+
+/* feature part css */
+
+.feature {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+}
+.card {
+    width: 300px;
+    margin: 0 auto;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.459);
+}
+.card .card-icon {
+    background-color: lawngreen;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    padding: 10px;
+    color: orangered;
+}
+.card h3 {
+    color: lawngreen;
+    font-size: 25px;
+}
+.card p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+.card a {
+    text-decoration: none;
+    color: lawngreen;
 }
